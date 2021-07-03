@@ -33,7 +33,6 @@ setInterval(async() => {
             .addField(`Date`, `${new Date()}`)
             .setFooter(config.discord.footer)
         hook.send(embed)
-        Delay(100)
         hook.sendFile(filename)
     }
 
