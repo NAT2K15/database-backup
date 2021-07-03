@@ -1,0 +1,20 @@
+{
+    "database_info": {
+        "host": "localhost",
+        "user": "root",
+        "password": "leave blank if no password",
+        "database": "fivem"
+    },
+
+    "discord": {
+        "savetodiscord": true,
+        "webhook": "discord webhook",
+        "color": "#000000",
+        "footer": "Database backup"
+    },
+
+    "interval": {
+        "time": 1
+    }
+
+}
