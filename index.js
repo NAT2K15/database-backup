@@ -10,6 +10,7 @@ let num = 0;
 setInterval(async() => {
     num = num + 1;
     let filename = `${root}/sql/${config.database_info.database}-${num}-${Date.now()}.sql`
+    console.log(filename)
     mysqldump({
         connection: {
             host: config.database_info.host,
@@ -25,7 +26,7 @@ setInterval(async() => {
         if (!webhook) return;
         const hook = new Webhook(webhook);
         let embed = new MessageBuilder()
-            .setAuthor('Database backup', 'https://nat2k15.xyz/assets/logo.png', 'https://github.com/nat2k15')
+            .setAuthor('Database backup')
             .setTimestamp()
             .setColor(config.discord.color)
             .addField(`File Path`, `\`${filename}\``)
@@ -33,7 +34,7 @@ setInterval(async() => {
             .addField(`Date`, `${new Date()}`)
             .setFooter(config.discord.footer)
         hook.send(embed)
-        hook.sendFile(filename)
+        hook.sendFile(`${filename}`)
     }
 
 }, config.interval.time * 1000 * 60);

@@ -2,7 +2,7 @@
     "database_info": {
         "host": "localhost",
         "user": "root",
-        "password": "leave blank if no password",
+        "password": "",
         "database": "fivem"
     },
 
