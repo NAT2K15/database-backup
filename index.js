@@ -14,6 +14,7 @@ setInterval(async() => {
     mysqldump({
         connection: {
             host: config.database_info.host,
+            port: config.database_info.port,
             user: config.database_info.user,
             password: config.database_info.password,
             database: config.database_info.database,
